@@ -14,7 +14,7 @@
 
 typedef struct specifiers
 {
-	char *specifiers;
+	char specifiers;
 	void (*f)(va_list);
 } specifiers_t;
 
