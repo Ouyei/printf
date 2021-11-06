@@ -15,8 +15,8 @@
 typedef struct specifiers
 {
 	char *specifiers;
-	char (*f)(char s);
-}specifiers_t;
+	void (*f)(va_list);
+} specifiers_t;
 
 int _printf(const char *format, ...);
 int eval_format(const char *c, ...);
