@@ -5,4 +5,4 @@
 2. Just because it's in print doesn't mean it's the gospel
 3. With a face like mine, I do better in print
 
-Created by [Oscar Bedat] (https://github.com/Ouyei/) & [Bruno Rodríguez](https://github.com/brunonra-dev/).
+Created by [Oscar Bedat](https://github.com/Ouyei/) & [Bruno Rodríguez](https://github.com/brunonra-dev/).
