@@ -18,7 +18,11 @@ typedef struct specifiers
 	void (*f)(va_list);
 } specifiers_t;
 
+/*prototypes*/
 int _printf(const char *format, ...);
-int eval_format(const char *c, ...);
+void eval_format(const char * const con_spec, ...);
 
+/*Conversion specifiers*/
+void print_char(va_list arg);
+void print_string(va_list arg);
 #endif
