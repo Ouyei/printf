@@ -10,43 +10,36 @@
 
 int _printf(const char *format, ...)
 {
-	int i, j, count, not_spec;
+	int i, count, count_fun;
 	va_list args;
 
-	specifiers_t spec[] = {
-		{'c', print_char},
-		{'s', print_string},
-		{'\0', '\0'}
-	};
 	i = count =  0;
 	va_start(args, format);
 
+	if (!format || (format[0] == '%' && format[1] == '\0'))
+		return (-1);
+
 	while (format[i])
 	{
+		count_fun = 0;
 		if (format[i] == '%')
 		{
-			if (format[i + 1])
-				break;
-			j = 0;
-			while (spec[j].specifiers)
+			if (!format[i + 1])
 			{
-				not_spec = 1;
-
-				if (format[i + 1] == spec[j].specifiers)
-				{
-					count += spec[j].f(args);
-					not_spec = 0;
-					break;
-				}
-				j++;
+				break;
 			}
-			i++;
-			if (not_spec == 1)
-				count += write(1, &format[i], 1);
+			else
+			{
+				i++;
+				count_fun += get_function(format[i], args);
+				if (!count_fun)
+					count += write(1, &format[i], 1);
+			}
 		}
 		else
 			count += write(1, &format[i], 1);
 		i++;
+		count += count_fun;
 	}
 	va_end(args);
 	return (count);

@@ -20,6 +20,7 @@ typedef struct specifiers
 
 /*prototypes*/
 int _printf(const char *format, ...);
+int get_function(char s, va_list args);
 
 /*Conversion specifiers*/
 int print_char(va_list args);
