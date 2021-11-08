@@ -19,24 +19,17 @@ int _printf(const char *format, ...)
 	if (!format || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 
-	while (format[i])
+	while (format[i] && format[i + 1])
 	{
 		count_fun = 0;
 		if (format[i] == '%')
 		{
-			if (!format[i + 1])
-			{
-				break;
-			}
-			else
-			{
-				i++;
-				count_fun += get_function(format[i], args);
-				if (count_fun == 0)
-					count += write(1, &format[i], 1);
-				else if (count_fun < 0)
-					return (-1);
-			}
+			i++;
+			count_fun += get_function(format[i], args);
+			if (count_fun == 0)
+				count += write(1, &format[i], 1);
+			else if (count_fun < 0)
+				return (-1);
 		}
 		else
 			count += write(1, &format[i], 1);
