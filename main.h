@@ -20,9 +20,9 @@ typedef struct specifiers
 
 /*prototypes*/
 int _printf(const char *format, ...);
-void eval_format(const char * const con_spec, ...);
+void eval_format(const char con_spec, ...);
 
 /*Conversion specifiers*/
-void print_char(va_list arg);
-void print_string(va_list arg);
+void print_char(va_list args);
+void print_string(va_list args);
 #endif

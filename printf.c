@@ -16,9 +16,13 @@ int _printf(const char *format, ...)
 	while (format[i])
 	{
 		if (format[i] == '%')
-			eval_format(format, args);
+		{
+			eval_format(format[i + 1], args);
+			i++;
+		}
 		else
-			return (write(1, &format[i], 1));
+			write(1, &format[i], 1);
+		i++;
 	}
 	va_end(args);
 

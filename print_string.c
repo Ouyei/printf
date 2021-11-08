@@ -5,15 +5,14 @@
 /**
  * print_string - print string.
  *
- * @arg: argument.
+ * @args: argument.
  */
 
-void print_string(va_list arg)
+void print_string(va_list args)
 {
-	int b;
-	
-	for (b = 0; va_arg(arg, int) == 0; b++)
-		;
+	int i;
+	char *str = va_arg(args, char *);
 
-	write(1, &arg, b);
+	for (i = 0; str; i++)
+		write(1, &str + i, 1);
 }

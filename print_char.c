@@ -4,10 +4,12 @@
 /**
  * print_char - print char
  *
- * @arg: argument.
+ * @args: argument.
  */
 
-void print_char(va_list arg)
+void print_char(va_list args)
 {
-	write(1, &arg, 1);
+	char c = va_arg(args, int);
+
+	write(1, &c, 1);
 }
