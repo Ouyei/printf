@@ -13,10 +13,17 @@
 int print_string(va_list args)
 {
 	int i;
+	int count_fun = 0;
 	char *str = va_arg(args, char *);
 
-	for (i = 0; str[i] != '\0'; i++)
-		write(1, &str[i], 1);
+	if (!str)
+		return (-1);
 
-	return (i - 1);
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		write(1, &str[i], 1);
+		count_fun++;
+	}
+
+	return (count_fun);
 }

@@ -32,8 +32,10 @@ int _printf(const char *format, ...)
 			{
 				i++;
 				count_fun += get_function(format[i], args);
-				if (!count_fun)
+				if (count_fun == 0)
 					count += write(1, &format[i], 1);
+				else if (count_fun < 0)
+					return (-1);
 			}
 		}
 		else
