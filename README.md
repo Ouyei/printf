@@ -1,3 +1,7 @@
+### _printf
+
+Hello, welcome to our first group project, we're replicating the printf() fucntion from the C Standard Library.
+
 ### version 1.0
 
 ## Introduction to the project
@@ -41,5 +45,26 @@ Specifier characters at the end define the type and the interpretation of its co
 |print_string.c|print_string function|
 |printf.c|main function|
 |man_3_printf | man page|
+
+## Install
+To install execute in terminal
+git clone https://github.com/Ouyei/printf
+
+## Compilation
+
+``gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c``
+
+## EXAMPLES ##
+- _printf functions examples:
+
+- _printf("Character:[%c]\n", 'H');
+  + Output: char: [H]
+- _printf("String:[%s]\n", "I am a string !");
+  + Output: string: [I am a string !]
+- _printf("decimal: [%d]\n", 10000);
+  + Output: decimal: [10000]
+- _printf("Percent: [%%]\n");
+  + Output: Percent: [%%]
+
 
 Created by [Oscar Bedat](https://github.com/Ouyei/) & [Bruno Rodríguez](https://github.com/brunonra-dev/).
