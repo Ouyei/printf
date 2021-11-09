@@ -50,11 +50,7 @@ git clone https://github.com/Ouyei/printf
 
 ``gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c``
 
-## Main
-
-The repository includes a main with test functions
-
-##### EXAMPLES #####
+## EXAMPLES ##
 - _printf functions examples:
 
 - _printf("Character:[%c]\n", 'H');
