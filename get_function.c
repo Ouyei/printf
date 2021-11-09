@@ -17,6 +17,8 @@ int get_function(char con_spec, va_list args)
 	specifiers_t spec[] = {
 		{'c', print_char},
 		{'s', print_string},
+		{'d', print_digit},
+		{'i', print_digit},
 		{0, NULL}
 	};
 

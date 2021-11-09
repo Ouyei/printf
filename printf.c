@@ -7,7 +7,6 @@
  *
  * Return: count of chars.
  */
-
 int _printf(const char *format, ...)
 {
 	int i, count, count_fun;
@@ -15,10 +14,10 @@ int _printf(const char *format, ...)
 
 	i = count =  0;
 	va_start(args, format);
-
-	if (!format || (format[0] == '%' && format[1] == '\0'))
+	if (!format || (format[0] == '%' && !format[1]))
 		return (-1);
-
+	if (format[0] == '%' && format[1] == ' ' && !format[2])
+		return (-1);
 	while (format[i])
 	{
 		count_fun = 0;
@@ -26,20 +25,23 @@ int _printf(const char *format, ...)
 		{
 			if (!format[i + 1])
 			{
+				count = -1;
 				break;
 			}
-			else
-			{
-				i++;
-				count_fun += get_function(format[i], args);
-				if (count_fun == 0)
-					count += write(1, &format[i], 1);
-				else if (count_fun < 0)
-					return (-1);
-			}
+			i++;
+			count_fun += get_function(format[i], args);
+			if (count_fun == 0)
+				count += write(1, &format[i], 1);
+			else if (count_fun == -1)
+				count = -1;
 		}
 		else
-			count += write(1, &format[i], 1);
+		{
+			if (count == -1)
+				write(1, &format[i], 1);
+			else
+				count += write(1, &format[i], 1);
+		}
 		i++;
 		count += count_fun;
 	}
