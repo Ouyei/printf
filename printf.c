@@ -9,10 +9,10 @@
  */
 int _printf(const char *format, ...)
 {
-	int i, count, count_fun, ret;
+	int i, count, count_fun;
 	va_list args;
 
-	i = count = ret = 0;
+	i = count = 0;
 	va_start(args, format);
 	if (!format || (format[0] == '%' && !format[1]))
 		return (-1);
@@ -43,7 +43,8 @@ int _printf(const char *format, ...)
 				count += _putchar(format[i]);
 		}
 		i++;
-		count += count_fun;
+		if (count != -1)
+			count += count_fun;
 	}
 	va_end(args);
 	return (count);
