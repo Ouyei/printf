@@ -9,10 +9,10 @@
  */
 int _printf(const char *format, ...)
 {
-	int i, count, count_fun;
+	int i, count, count_fun, ret;
 	va_list args;
 
-	i = count =  0;
+	i = count = ret = 0;
 	va_start(args, format);
 	if (!format || (format[0] == '%' && !format[1]))
 		return (-1);
@@ -28,12 +28,12 @@ int _printf(const char *format, ...)
 				count = -1;
 				break;
 			}
-			i++;
-			count_fun += get_function(format[i], args);
+			count_fun += get_function(format[i + 1], args);
 			if (count_fun == 0)
-				count += _putchar(format[i]);
-			else if (count_fun == -1)
+				count += _putchar(format[i + 1]);
+			if (count_fun == -1)
 				count = -1;
+			i++;
 		}
 		else
 		{
