@@ -16,7 +16,8 @@ _printf
 .SH DESCRIPTION
 
 .PP
-_printf function output text and numbers according to a format.
+
+Produce output to stdout according to a format described below similar to the printf() function.
 
 .SH OPTIONS
 
@@ -30,8 +31,8 @@ _printf function output text and numbers according to a format.
 
 .SH EXAMPLES
 
-.PP
-With main.c we can test our functions:
+.B With main.c we can test our functions:
+
 .PP
 #include "main.h"
 .PP
