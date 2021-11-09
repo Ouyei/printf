@@ -23,10 +23,7 @@ int print_digit(va_list args)
 	}
 
 	if (digit < 10)
-	{
-		count_fun += _putchar(digit + '0');
-		return (count_fun);
-	}
+		return (count_fun += _putchar(digit + '0'));
 
 	digitaux = digit;
 
