@@ -1,8 +1,18 @@
 # 0x11. C - printf
 
-0. I'm not going anywhere. You can print that wherever you want to. I'm here and I'm a Spur for life
-1. Education is when you read the fine print. Experience is what you get if you don't
-2. Just because it's in print doesn't mean it's the gospel
-3. With a face like mine, I do better in print
+Project \_printf() - Produce output to stdout according to a format described below similar to the printf() function.
+
+## Repository files
+
+|**File**|**Description**|
+|.gitignore|ignore files|
+|README.md|this file|
+|\_putchar.c|putchar function|
+|get_function.c|get_function function|
+|main.h|header file|
+|print_char.c|print_char function|
+|print_digit.c|print_digit function|
+|print_string.c|print_string function|
+|printf.c|main function|
 
 Created by [Oscar Bedat](https://github.com/Ouyei/) & [Bruno Rodríguez](https://github.com/brunonra-dev/).
