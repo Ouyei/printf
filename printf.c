@@ -25,7 +25,6 @@ int _printf(const char *format, ...)
 		{
 			if (!format[i + 1])
 			{
-				count = -1;
 				break;
 			}
 			count_fun += get_function(format[i + 1], args);
