@@ -13,8 +13,8 @@ int print_digit(va_list args)
 {
 	int decimal = 1;
 	int count_fun = 0;
-	int digit = va_arg(args, int);
-	int digitaux;
+	long int digit = va_arg(args, int);
+	long int digitaux;
 
 	if (digit < 0)
 	{
