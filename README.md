@@ -1,3 +1,7 @@
+#_printf
+
+Hello, welcome to our first group project, we're replicating the printf() fucntion from the C Standard Library.
+
 ### version 1.0
 
 ## Introduction to the project
