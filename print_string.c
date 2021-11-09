@@ -21,7 +21,7 @@ int print_string(va_list args)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		write(1, &str[i], 1);
+		_putchar(str[i]);
 		count_fun++;
 	}
 

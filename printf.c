@@ -31,16 +31,16 @@ int _printf(const char *format, ...)
 			i++;
 			count_fun += get_function(format[i], args);
 			if (count_fun == 0)
-				count += write(1, &format[i], 1);
+				count += _putchar(format[i]);
 			else if (count_fun == -1)
 				count = -1;
 		}
 		else
 		{
 			if (count == -1)
-				write(1, &format[i], 1);
+				_putchar(format[i]);
 			else
-				count += write(1, &format[i], 1);
+				count += _putchar(format[i]);
 		}
 		i++;
 		count += count_fun;

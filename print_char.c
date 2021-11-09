@@ -16,7 +16,7 @@ int print_char(va_list args)
 	if (!c)
 		return (-1);
 
-	write(1, &c, 1);
+	_putchar(c);
 
 	return (1);
 }
