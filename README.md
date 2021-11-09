@@ -42,4 +42,30 @@ Specifier characters at the end define the type and the interpretation of its co
 |printf.c|main function|
 |man_3_printf | man page|
 
+## Compilation
+
+``gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c``
+
+## Main
+
+The repository includes a main with test functions
+
+##### EXAMPLES #####
+_printf functions examples:
+
+_printf("Character:[%c]\n", 'H');
+  + Output: char: [H]
+_printf("String:[%s]\n", "I am a string !");
+  + Output: string: [I am a string !]
+- _printf("decimal: [%d]\n", 10000);
+  + Output: decimal: [10000]
+- _printf("Percent: [%%]\n");
+  + Output: Percent: [%%]
+
+### Manual ###
+To review the _printf function manual execute in your terminal:
+
+$ man ./man_3_printf
+
+
 Created by [Oscar Bedat](https://github.com/Ouyei/) & [Bruno Rodríguez](https://github.com/brunonra-dev/).
