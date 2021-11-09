@@ -23,8 +23,9 @@ int _printf(const char *format, ...)
 		count_fun = 0;
 		if (format[i] == '%')
 		{
-			if (!format[i + 1])
+			if (!format[i + 1] || (format[i + 1] == ' ' && !format[i + 2]))
 			{
+				count = -1;
 				break;
 			}
 			count_fun += get_function(format[i + 1], args);
