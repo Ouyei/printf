@@ -1,19 +1,35 @@
 .\" Manpage for _printf
 .TH _printf (3) "11/06/2021" "1.0" "_printf Programmer's Manual"
+
 .SH NAME
+
 _printf
+
 .SH SYNOPSIS
 
-#include "main.h"
-int _printf(const char *format, ...)
+.B #include "main.h"
+.PP
+
+.B int _printf(const char *format, ...)
+.B ...)
+
 .SH DESCRIPTION
-_printf function output text and Numbers according to a format.
+
+.PP
+_printf function output text and numbers according to a format.
+
 .SH OPTIONS
-.B %c -  Prints a single char.
-.B %s -  Prints the argument as a string.
-.B %% -  Prints a single perecentage sign to the stream.
-.B %i / %d - Prints signed decimal integer.
+
+.RS
+.nf
+- %c -  Prints a single char.
+- %s -  Prints the argument as a string.
+- %% -  Prints a single perecentage sign to the stream.
+- %i / %d - Prints signed decimal integer.
+.RE
+
 .SH EXAMPLES
+
 .PP
 With main.c we can test our functions:
 .PP
@@ -38,7 +54,11 @@ Output: integer: 10
 _printf("decimal: %d\n", 100);
 .PP
 Output: decimal: 100
+
 .B Return value
+
 On success, _printf returns the number of printed characters. If formats is error or NULL returns -1
+
 .SH AUTHORS
+
 Bruno Rodriguez, Oscar Bedat
