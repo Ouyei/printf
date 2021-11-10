@@ -19,6 +19,9 @@ int print_string(va_list args)
 	if (!str)
 		str = "(null)";
 
+	if (str[0] == '\0')
+		return (-1);
+
 	for (i = 0; str[i] != '\0'; i++)
 		count_fun += _putchar(str[i]);
 
