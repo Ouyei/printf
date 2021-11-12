@@ -3,18 +3,30 @@
 #include <stdarg.h>
 
 /**
- * print_string - print string.
+ * print_rev_string - print reversed string.
  *
  * @args: argument.
  *
  * Return: character count.
  */
 
-int print_string(va_list args)
+int print_rev_string(va_list args)
 {
-	int i;
+	int i, len = 0, last_len;
 	int count_fun = 0;
 	char *str = va_arg(args, char *);
+
+	while (str[len] != '\0')
+	{
+		len++;
+	}
+	last_len = len;
+
+	for (i = 0; i >= last_len; i++)
+	{
+		str[i] = str[len];
+		len--;
+	}
 
 	if (!str)
 		str = "(null)";

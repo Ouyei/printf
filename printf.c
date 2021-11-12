@@ -22,22 +22,18 @@ int _printf(const char *format, ...)
 		count_fun = 0;
 		if (format[i] == '%')
 		{
-			if (!format[i + 1] || (format[i + 1] == ' ' && !format[i + 2]))
-			{
-				count = -1;
-				break;
-			}
-			count_fun += get_function(format[i + 1], args);
+			if (!format[i + 1])
+				return (-1);
+			i++;
+			count_fun += get_function(format[i], args);
 			if (count_fun == 0)
-				count += _putchar(format[i + 1]);
+				count += _putchar(format[i]);
+
 			if (count_fun == -1)
 				count = -1;
-			i++;
 		}
 		else
-		{
 			(count == -1) ? (_putchar(format[i])) : (count += _putchar(format[i]));
-		}
 		i++;
 		if (count != -1)
 			count += count_fun;
