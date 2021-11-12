@@ -35,7 +35,6 @@ Specifier characters at the end define the type and the interpretation of its co
 
 |**File**|**Description**|
 |--------|---------------|
-|.gitignore|ignore files|
 |README.md|this file|
 |\_putchar.c|putchar function|
 |get_function.c|get_function function|
@@ -45,6 +44,7 @@ Specifier characters at the end define the type and the interpretation of its co
 |print_string.c|print_string function|
 |printf.c|main function|
 |man_3_printf | man page|
+|printf_flowchart.png | flowchart _printf|
 
 ## Install
 To install execute in terminal
