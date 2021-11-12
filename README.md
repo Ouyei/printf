@@ -68,6 +68,6 @@ git clone https://github.com/Ouyei/printf
 
 # Flowchart
 
-![Flowchart](https://raw.githubusercontent.com/Ouyei/printf/main/_prinf_flowchart.png)
+![Flowchart](https://raw.githubusercontent.com/Ouyei/printf/main/printf_flowchart.png)
 
 Created by [Oscar Bedat](https://github.com/Ouyei/) & [Bruno Rodríguez](https://github.com/brunonra-dev/).
